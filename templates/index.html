@@ -1,0 +1,31 @@
+{% extends "bootstrap_responsive.html" %}
+{% import "bootstrap_wtf.html" as wtf %}
+
+{% block body_content %}
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">EverDisq</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="container">
+        <div>Enter the "Share" URL from Evernote, and we will put it side by side with Disqus comments, see <a href="http://everdisq.net/note/https://www.evernote.com/shard/s1/sh/98606328-64a8-4b84-bd79-a4de74295689/96300747255b16f46f791a4ac63df80c/">what it looks like and learn more</a></div>
+            <form class="form form-horizontal" method="post">
+            {{ form.hidden_tag() }}
+            {{ wtf.form_errors(form, False) }}
+
+            {{ wtf.horizontal_field(form.url) }}
+
+            <div class="form-actions">
+               <button name="action_save" type="submit" class="btn btn-primary">Discuss</button>
+            </div>
+          </form>
+    </div>
+
+{% endblock %}

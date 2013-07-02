@@ -1,0 +1,12 @@
+Flask==0.10.1
+Flask-Bootstrap==2.3.1-1
+Flask-WTF==0.8.3
+Jinja2==2.7
+MarkupSafe==0.18
+WTForms==1.0.4
+Werkzeug==0.9.1
+cssselect==0.8
+distribute==0.6.34
+gunicorn==0.17.4
+itsdangerous==0.21
+wsgiref==0.1.2
